@@ -9,12 +9,13 @@ import Index from "../../components/about/index";
 const heroContent = {
   heroImage: heroImg,
   heroMobileImage: heroImgMobile,
-  heroTitleName: "Seyed Alireza Jafari",
-  heroDesignation: "Performance Marketing Specialist",
-  heroDescriptions: `I'm a Tunisian based Data-Driven Digital Marketing Manager (SaaS)`,
+  heroTitleName: "سید علیرضا جعفری",
+  heroDesignation: "مشاور و مدیر دیجیتال مارکتینگ",
+  heroDescriptions: `مشاور و مدیر دیجیتال مارکتینگ (با رویکرد داده‌محور) هستم؛ به بیان دیگر برای مشکلات بازاریابی و افزایش فروش کسب‌و‌کار شما، راهکارهای دیجیتالی متمایز و اثربخش تدوین و اجرا می‌کنم.`,
   heroBtn: [
-    {id : 1 , name: "Resume" , right : 0 , href : "https://alirezajafari.com/resume/" }, 
-    {id : 2 , name: "Weblog" , right : 20 , href : "https://alirezajafari.com/blog/" }, 
+    {id : 1 , name: "رزومه" , href : "https://alirezajafari.com/resume/" }, 
+    {id : 2 , name: "وبلاگ" , href : "https://alirezajafari.com/blog/" }, 
+    {id : 3 , name: "در خواست مشاوره" , href : "https://alirezajafari.com/" }, 
   ],
 };
 
@@ -43,15 +44,13 @@ const Hero = () => {
               alt="hero man"
             />
             <h1 className="text-uppercase poppins-font">
-              I'm {heroContent.heroTitleName}.
+              من {heroContent.heroTitleName} هستم
               <span>{heroContent.heroDesignation}</span>
             </h1>
             <p className="open-sans-font">{heroContent.heroDescriptions}</p>
-            <div 
-            style={{display : "flex" , justifyContent : "space-between" ,flexDirection: "column", alignItems: "center"}}
-            >
+            <div className="home-details__buttons">
               {heroContent.heroBtn.map((item) => (
-                <button className="button" onClick={() => toggleModalOne(item.href)} key={item.id} style={{right : `${item.right}%` ,width : "200px" ,marginBottom : "10px" }}>
+                <button className="button" onClick={() => toggleModalOne(item.href)} key={item.id}>
                   <span className="button-text">{item.name}</span>
                   <span className="button-icon fa fa-arrow-right"></span>
                 </button>

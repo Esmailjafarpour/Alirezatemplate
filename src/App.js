@@ -27,7 +27,7 @@ const App = () => {
       <ScrollToTop />
       <AllRoutes />
       {/* End contact */}
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       {/* Same as */}
     </>
   );
